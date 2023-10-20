@@ -4,34 +4,27 @@
  * Data: 20/10/2023              
  * Versão: 1.0
  ************************************************************/
-var estadoscidade = require("./estados_clientes.js")
+var estadoscidade = require('./estados_cidades')
 
-const getListaDeEstados = () => {
+const getListaDeEstados = function() {
 
-    let estados = pais.estadosCidades.estados
     let siglas = {}
-    let uf =[]
+    let ufarray =[]
 
     // forEach
-    estados.forEach(function(estados){
-        uf.push(estados.sigla)
+    estadoscidade.estadosCidades.estados.forEach(function(sigla, index){
+        ufarray.push(estadoscidade.estadosCidades.estados[index].sigla)
     })
 
-    siglas.uf = uf
-    siglas.uf = ufsiglas.quantidade = pais.estadosCidades.estados.lenght
+    siglas.uf = ufarray
+    siglas.quantidade = ufarray.length
+
     console.log(siglas)
+    return siglas
     
 }
 
-const getDadosEstado = () => {
-
-    let uf = pais.estadosCidades.estados.sigla
-
-    // forEach
-    estados.forEach(function(estados){
-        uf.push(estados.sigla)
-    })
-}
+getListaDeEstados()
 
 
 

@@ -22495,5 +22495,5 @@ var estadosCidades = {
 };
 
 module.exports = {
-   estados_cidades
+   estadosCidades
 }
